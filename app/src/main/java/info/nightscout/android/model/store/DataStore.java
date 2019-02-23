@@ -905,7 +905,7 @@ public class DataStore extends RealmObject {
     public boolean isNsEnableUploaderBatteryFull() {
         return nsEnableSystemStatus && nsEnableUploaderBatteryFull;
     }
-    public boolean isnsEnableUploaderUsbError() {
+    public boolean isNsEnableUploaderUsbError() {
         return nsEnableSystemStatus && nsEnableUploaderUsbError;
     }
 

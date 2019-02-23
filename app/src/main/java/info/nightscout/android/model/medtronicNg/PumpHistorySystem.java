@@ -142,11 +142,11 @@ public class PumpHistorySystem extends RealmObject implements PumpHistoryInterfa
                 priority = MessageItem.PRIORITY.LOWEST;
                 title = "Debug";
                 break;
-            case CNL_USB_ERROR:
             case PUMP_DEVICE_ERROR:
                 type = MessageItem.TYPE.ALERT_UPLOADER_ERROR;
                 priority = MessageItem.PRIORITY.EMERGENCY;
                 break;
+            case CNL_USB_ERROR:
             case COMMS_PUMP_CONNECTED:
             case COMMS_PUMP_LOST:
             case COMMS_PUMP_LOW_BATTERY_MODE:
