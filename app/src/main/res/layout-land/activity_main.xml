@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/view_sgv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintHorizontal_weight="10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+            >
+
+            <TextView
+                android:id="@+id/textview_bg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical|end"
+                android:lines="1"
+                android:text="@string/dash"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="140sp"
+                app:autoSizeMinTextSize="30sp"
+                app:autoSizeStepGranularity="1px"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintHorizontal_weight="5"
+                app:layout_constraintVertical_weight="4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textview_units"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <info.nightscout.android.utils.IconicsAppCompatTextView
+                android:id="@+id/textview_trend"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom|center_horizontal"
+                android:lines="1"
+                android:text="@string/dash"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeMinTextSize="30sp"
+                app:autoSizeStepGranularity="1px"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintVertical_weight="4"
+                app:layout_constraintStart_toEndOf="@+id/textview_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/textview_units"
+                />
+
+            <TextView
+                android:id="@+id/textview_units"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="top|center_horizontal"
+                android:lines="1"
+                android:text="@string/glucose_mgdl"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:autoSizeMaxTextSize="20sp"
+                app:autoSizeMinTextSize="5sp"
+                app:autoSizeStepGranularity="1px"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/textview_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_trend"
+                app:layout_constraintBottom_toBottomOf="@+id/textview_bg"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintHorizontal_weight="10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout1"
+            >
+
+            <TextView
+                android:id="@+id/textview_bg_time"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:lines="1"
+                android:text="@string/dots"
+                android:gravity="center_vertical|center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1px"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintBottom_toTopOf="@+id/textview_iob"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/textview_iob"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="20dp"
+                android:lines="1"
+                android:text="@string/main_screen__active_insulin"
+                android:gravity="center_vertical|center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="10sp"
+                app:autoSizeStepGranularity="1px"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintVertical_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_bg_time"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+
+        <info.nightscout.android.medtronic.ChartSgv
+            android:id="@+id/chart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="333:100"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
